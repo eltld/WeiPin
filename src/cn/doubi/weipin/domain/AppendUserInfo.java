@@ -9,7 +9,7 @@ import java.io.Serializable;
 		毕业院校
 		邮箱
 		婚姻状态 
-		户口
+		户口 
 		出生年月
 		身高
 		国家
