@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/weipin/!svn/ver/8/trunk/src/cn/doubi/weipin/ui
+END
+ContentFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/weipin/!svn/ver/15/trunk/src/cn/doubi/weipin/ui/ContentFragment.java
+END
+OralInfoActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/ui/OralInfoActivity.java
+END
+MyOralInfoListActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/ui/MyOralInfoListActivity.java
+END
+PushMessageActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/ui/PushMessageActivity.java
+END
+MyInfoActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/weipin/!svn/ver/15/trunk/src/cn/doubi/weipin/ui/MyInfoActivity.java
+END
+BaseActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/weipin/!svn/ver/14/trunk/src/cn/doubi/weipin/ui/BaseActivity.java
+END
+WelcomeActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/weipin/!svn/ver/14/trunk/src/cn/doubi/weipin/ui/WelcomeActivity.java
+END
+LoginActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/ui/LoginActivity.java
+END
+SuggestActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/weipin/!svn/ver/13/trunk/src/cn/doubi/weipin/ui/SuggestActivity.java
+END
+WXEntryActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/weipin/!svn/ver/15/trunk/src/cn/doubi/weipin/ui/WXEntryActivity.java
+END
+WeiPinApplcation.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/ui/WeiPinApplcation.java
+END
+RegisteredActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/ui/RegisteredActivity.java
+END
+LeftFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/ui/LeftFragment.java
+END
+SplashActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/weipin/!svn/ver/14/trunk/src/cn/doubi/weipin/ui/SplashActivity.java
+END
+MySettingActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/ui/MySettingActivity.java
+END
+AboutActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/weipin/!svn/ver/13/trunk/src/cn/doubi/weipin/ui/AboutActivity.java
+END
+SlideBaseActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/weipin/!svn/ver/14/trunk/src/cn/doubi/weipin/ui/SlideBaseActivity.java
+END
+HomeActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/weipin/!svn/ver/15/trunk/src/cn/doubi/weipin/ui/HomeActivity.java
+END

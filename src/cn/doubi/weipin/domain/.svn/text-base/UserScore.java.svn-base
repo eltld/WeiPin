@@ -1,0 +1,61 @@
+package cn.doubi.weipin.domain;
+
+import java.io.Serializable;
+/**
+ * 用户评分
+ * 信息说明：
+	   	用户编号
+		电话面试分数
+		实体面试分数
+		首月评级分数
+ */
+public class UserScore implements Serializable
+{
+
+	private static final long serialVersionUID = 1L;
+	private String user_id;
+	private String score_tel;
+	private String score_oral;
+	private String score_work;
+	public String getUser_id()
+	{
+		return user_id;
+	}
+	public void setUser_id(String user_id)
+	{
+		this.user_id = user_id;
+	}
+	public String getScore_tel()
+	{
+		return score_tel;
+	}
+	public void setScore_tel(String score_tel)
+	{
+		this.score_tel = score_tel;
+	}
+	public String getScore_oral()
+	{
+		return score_oral;
+	}
+	public void setScore_oral(String score_oral)
+	{
+		this.score_oral = score_oral;
+	}
+	public String getScore_work()
+	{
+		return score_work;
+	}
+	public void setScore_work(String score_work)
+	{
+		this.score_work = score_work;
+	}
+	@Override
+	public String toString()
+	{
+		return "UserScore [user_id=" + user_id + ", score_tel=" + score_tel
+				+ ", score_oral=" + score_oral + ", score_work=" + score_work
+				+ "]";
+	}
+	
+}
+

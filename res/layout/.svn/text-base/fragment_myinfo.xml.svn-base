@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+<TextView
+        android:id="@+id/homeTitle"
+        style="@style/base_header_view"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="资料" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff" >
+
+        <Button
+            android:id="@+id/head_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/default_header_bg" />
+
+        <TextView
+            android:id="@+id/usertel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/head_image"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/head_image"
+            android:text="用户名"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/head_image"
+            android:layout_alignLeft="@+id/head_image"
+            android:layout_marginLeft="50dp"
+            android:isIndicator="true"
+            android:scaleX="0.5"
+            android:scaleY="0.5" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/myinfo_listview"
+        style="@style/listview_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp" >
+    </ListView>
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/myinfo_edit_done_button"
+        style="@style/base_button_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="完成" />
+
+</LinearLayout>

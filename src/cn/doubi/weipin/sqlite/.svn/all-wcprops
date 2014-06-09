@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/sqlite
+END
+SqliteImplements.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/sqlite/SqliteImplements.java
+END
+SqliteInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/weipin/!svn/ver/4/trunk/src/cn/doubi/weipin/sqlite/SqliteInterface.java
+END
+DouBiSqlite.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/sqlite/DouBiSqlite.java
+END

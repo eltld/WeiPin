@@ -1,0 +1,177 @@
+package cn.doubi.weipin.ui;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.graphics.Color;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import cn.doubi.weipin.R;
+import cn.doubi.weipin.ui.homefragment.MoreFragmet;
+import cn.doubi.weipin.ui.homefragment.OfferFragment;
+import cn.doubi.weipin.ui.homefragment.OralFragment;
+import cn.doubi.weipin.ui.homefragment.ShareFragment;
+
+import com.amap.api.maps.SupportMapFragment;
+/**
+ * HomeActivity的 Fragment
+ */
+public class ContentFragment extends SupportMapFragment implements OnClickListener
+{
+	private ViewPager mHomePager;
+	private TextView mHomeTitleText;
+	private View rootView;
+	private int[] titleIds;
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		titleIds = new int[]{R.string.oral,R.string.offer,R.string.share,R.string.more};
+		rootView = inflater.inflate(R.layout.activity_main, null);
+		mHomeTitleText = (TextView) rootView.findViewById(R.id.homeTitle);
+		mHomePager = (ViewPager) rootView.findViewById(R.id.homePager);
+		mHomePager.setOnPageChangeListener(new OnPageChangeListener() {
+			
+			@Override
+			public void onPageSelected(int position) {
+				mHomeTitleText.setText(getResources().getString(titleIds[position]));
+				changeButtonColor(position);
+			}
+			
+			@Override
+			public void onPageScrolled(int arg0, float arg1, int arg2) {
+				
+			}
+			
+			@Override
+			public void onPageScrollStateChanged(int arg0) {
+				
+			}
+		});
+		initTableButton(rootView);
+		initHomePager();
+		return rootView;
+	}
+	private void initTableButton(View view) {
+		LinearLayout tab = (LinearLayout) view.findViewById(R.id.tabParentLayout);
+		for (int i = 0; i < tab.getChildCount(); i++) {
+			Button b = (Button) tab.getChildAt(i);
+			mTableButtonList.add(b);
+			b.setOnClickListener(this);
+		}
+		
+	}
+	private void changeButtonColor(int position){
+		for (int i = 0; i < mTableButtonList.size(); i++) {
+			if(i == position){
+				mTableButtonList.get(i).setBackgroundColor(Color.parseColor("#0576B3"));
+			}else{
+				mTableButtonList.get(i).setBackgroundColor(Color.parseColor("#00A0DC"));
+			}
+		}
+	}
+	private List<Button> mTableButtonList = new ArrayList<Button>();
+	private void initHomePager() {
+		OralFragment mOralFragment = new OralFragment();
+		ShareFragment mShareFragment = new ShareFragment();
+		MoreFragmet mMoreFragmet = new MoreFragmet();
+		OfferFragment mOfferFragment = new OfferFragment();
+		List<Fragment>  fragments = new ArrayList<Fragment>();
+		fragments.add(mOralFragment);
+		fragments.add(mOfferFragment);
+		fragments.add(mShareFragment);
+		fragments.add(mMoreFragmet);
+		mHomePager.setAdapter(new MyFragmentPagerAdapter(getFragmentManager(), fragments));
+		mHomePager.setOffscreenPageLimit(4);
+	}
+	public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
+	    private List<Fragment> fragmentsList;
+
+	    public MyFragmentPagerAdapter(FragmentManager fm) {
+	        super(fm);
+	    }
+
+	    public MyFragmentPagerAdapter(FragmentManager fm, List<Fragment> fragments) {
+	        super(fm);
+	        this.fragmentsList = fragments;
+	    }
+
+	    @Override
+	    public int getCount() {
+	        return fragmentsList.size();
+	    }
+
+	    @Override
+	    public Fragment getItem(int arg0) {
+	        return fragmentsList.get(arg0);
+	    }
+
+	    @Override
+	    public int getItemPosition(Object object) {
+	        return super.getItemPosition(object);
+	    }
+
+	}
+	@Override
+	public void onResume() {
+		super.onResume();
+	}
+	@Override
+	public void onPause() {
+		super.onPause();
+	}
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+	}
+
+	@Override
+	public void onLowMemory() {
+		super.onLowMemory();
+	}
+
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+	}
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState)
+	{
+		super.onActivityCreated(savedInstanceState);
+	}
+	@Override
+	public void onClick(View v)
+	{
+		switch (v.getId()) {
+		case R.id.oralButton:
+			mHomePager.setCurrentItem(0, true);
+			changeButtonColor(0);
+			break;
+		case R.id.offerButton:
+			mHomePager.setCurrentItem(1, true);
+			changeButtonColor(1);
+			break;
+		case R.id.shareButton:
+			mHomePager.setCurrentItem(2, true);
+			changeButtonColor(2);
+			break;
+		case R.id.moreButton:
+			mHomePager.setCurrentItem(3, true);
+			changeButtonColor(3);
+			break;
+
+		default:
+			break;
+		}
+	}
+}
+

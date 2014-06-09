@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/weipin/!svn/ver/8/trunk
+END
+weipinkeystore.keystory
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/weipin/!svn/ver/15/trunk/weipinkeystore.keystory
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/weipin/!svn/ver/14/trunk/AndroidManifest.xml
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/weipin/!svn/ver/8/trunk/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/weipin/!svn/ver/2/trunk/.project
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/weipin/!svn/ver/15/trunk/build.xml
+END
+proguard-project.txt
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/weipin/!svn/ver/2/trunk/proguard-project.txt
+END
+project.properties
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/weipin/!svn/ver/14/trunk/project.properties
+END

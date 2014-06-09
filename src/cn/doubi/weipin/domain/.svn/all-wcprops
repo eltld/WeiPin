@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/weipin/!svn/ver/3/trunk/src/cn/doubi/weipin/domain
+END
+AppendUserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/weipin/!svn/ver/12/trunk/src/cn/doubi/weipin/domain/AppendUserInfo.java
+END
+UserScore.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/weipin/!svn/ver/2/trunk/src/cn/doubi/weipin/domain/UserScore.java
+END
+RecommendInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/weipin/!svn/ver/2/trunk/src/cn/doubi/weipin/domain/RecommendInfo.java
+END
+StartPicObj.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/weipin/!svn/ver/13/trunk/src/cn/doubi/weipin/domain/StartPicObj.java
+END
+UpdateObj.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/weipin/!svn/ver/2/trunk/src/cn/doubi/weipin/domain/UpdateObj.java
+END
+BaseUserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/weipin/!svn/ver/13/trunk/src/cn/doubi/weipin/domain/BaseUserInfo.java
+END
+OfferInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/weipin/!svn/ver/15/trunk/src/cn/doubi/weipin/domain/OfferInfo.java
+END
+OralInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/weipin/!svn/ver/15/trunk/src/cn/doubi/weipin/domain/OralInfo.java
+END
+CompanyInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/weipin/!svn/ver/2/trunk/src/cn/doubi/weipin/domain/CompanyInfo.java
+END
+EmploymentInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/weipin/!svn/ver/15/trunk/src/cn/doubi/weipin/domain/EmploymentInfo.java
+END
+UrlContent.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/weipin/!svn/ver/15/trunk/src/cn/doubi/weipin/domain/UrlContent.java
+END
+ResultCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/weipin/!svn/ver/15/trunk/src/cn/doubi/weipin/domain/ResultCode.java
+END

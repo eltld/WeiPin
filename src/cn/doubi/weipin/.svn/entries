@@ -1,0 +1,49 @@
+8
+
+dir
+8
+http://code.taobao.org/svn/weipin/trunk/src/cn/doubi/weipin
+http://code.taobao.org/svn/weipin
+
+
+
+2014-04-11T11:39:58.385066Z
+8
+haicuan139
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b8eb5a7a-0f29-4652-b11f-64430a4c2b6f
+
+domain
+dir
+
+push
+dir
+
+service
+dir
+
+sqlite
+dir
+
+ui
+dir
+
+utils
+dir
+
+view
+dir
+

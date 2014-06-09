@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/homeTitle"
+        style="@style/base_header_view"
+        android:layout_width="fill_parent"
+        android:text="@string/zhiwei"
+        android:layout_height="55dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/homePager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:background="#ffffff" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/tabParentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/oralButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:layout_weight="1"
+            android:background="#0576B3"
+            android:drawableTop="@drawable/zhaopin"
+            android:text="职位"
+            android:textColor="#ffffff"
+            android:drawablePadding="-6dp"
+            android:textSize="10sp" />
+
+        <Button
+            android:paddingTop="10dp"
+            android:drawablePadding="-6dp"
+            android:id="@+id/offerButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#00A0DC"
+            android:drawableTop="@drawable/luyong"
+            android:text="面试"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            />
+
+        <Button
+            android:paddingTop="10dp"
+            android:id="@+id/shareButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:drawablePadding="-6dp"
+            android:layout_weight="1"
+            android:background="#00A0DC"
+            android:text="录用"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:drawableTop="@drawable/fenxiang"
+             />
+
+        <Button
+            android:paddingTop="10dp"
+            android:drawableTop="@drawable/gengduo"
+            android:id="@+id/moreButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:drawablePadding="-6dp"
+            android:layout_weight="1"
+            android:background="#00A0DC"
+            android:text="好友"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+             />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/more"
+        android:layout_width="30dp"
+        android:onClick="onClick"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/more_icon"
+         />
+
+</RelativeLayout>

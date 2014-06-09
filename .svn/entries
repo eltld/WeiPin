@@ -1,0 +1,155 @@
+8
+
+dir
+8
+http://code.taobao.org/svn/weipin/trunk
+http://code.taobao.org/svn/weipin
+
+
+
+2014-04-11T11:39:58.385066Z
+8
+haicuan139
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b8eb5a7a-0f29-4652-b11f-64430a4c2b6f
+
+.classpath
+file
+
+
+
+
+2014-04-11T11:42:50.000000Z
+2173a27bea508fb9beb49723e3bc308a
+2014-04-11T11:39:58.385066Z
+8
+haicuan139
+
+.project
+file
+
+
+
+
+2014-04-11T11:46:06.000000Z
+2a55a699a2cfe2911b2041d8bfe400b4
+2014-04-05T08:19:52.540711Z
+2
+haicuan139
+
+.settings
+dir
+
+AndroidManifest.xml
+file
+14
+
+
+
+2014-05-06T13:45:15.000000Z
+bd957bda4b3ace806c7dc14d1942659b
+2014-05-10T11:07:57.234332Z
+14
+haicuan139
+
+assets
+dir
+
+build.xml
+file
+15
+
+
+
+2014-05-06T13:30:58.000000Z
+94ae206e3d3b9cbef0f653da0ff2adb8
+2014-05-10T19:40:41.233214Z
+15
+haicuan139
+
+ic_launcher-web.png
+file
+15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
+
+libs
+dir
+
+otherfile
+dir
+
+proguard-project.txt
+file
+
+
+
+
+2014-04-11T11:46:06.000000Z
+18bfe77c342b4698f1cef19cf8d918e2
+2014-04-05T08:19:52.540711Z
+2
+haicuan139
+
+project.properties
+file
+14
+
+
+
+2014-05-06T13:34:04.000000Z
+5682aca256f388cf1dea8ab693650d1d
+2014-05-10T11:07:57.234332Z
+14
+haicuan139
+
+res
+dir
+
+src
+dir
+
+weipinkeystore.keystory
+file
+15
+
+
+
+2014-04-11T11:46:04.000000Z
+785a10e48d607e4dc665ae8a111cbe92
+2014-05-10T19:40:41.233214Z
+15
+haicuan139
+has-props
+

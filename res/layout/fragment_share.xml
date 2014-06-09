@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+     >
+
+
+<!--     android:text="我通过微聘获得了一家公司的的录用通知\n大家快来使用微聘吧!!真的很好用!" -->
+
+<Button
+    android:id="@+id/share_edit"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_width="fill_parent"
+    android:background="@drawable/edit_bg"
+    android:layout_height="60dp"
+    android:gravity="top"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:layout_marginTop="35dp"
+    android:textColor="#777777"
+    android:layout_alignParentRight="true"
+    android:text="我通过微聘获得了一家公司的的录用通知大家快来使用微聘吧!!真的很好用!" />
+
+<TextView
+    android:id="@+id/textView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:textSize="10sp"
+    android:layout_alignRight="@+id/share_edit"
+    android:layout_below="@+id/share_edit"
+    android:text="长按内容把你的快乐分享给好友"
+    android:textColor="#999999" />
+
+</RelativeLayout>

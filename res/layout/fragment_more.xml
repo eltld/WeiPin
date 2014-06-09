@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+<TextView
+        android:id="@+id/homeTitle"
+        style="@style/base_header_view"
+        android:layout_width="fill_parent"
+        android:text="更多"
+        android:layout_height="55dp" />
+    <LinearLayout
+        android:id="@+id/parent_lin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/myinfo_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oral_item_selector"
+            android:gravity="left"
+            android:onClick="onClick"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:text="我的资料"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#19000000" />
+
+        <Button
+            android:id="@+id/jianyi_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oral_item_selector"
+            android:gravity="left"
+            android:onClick="onClick"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:text="建议反馈"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#19000000" />
+
+        <Button
+            android:id="@+id/about_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oral_item_selector"
+            android:gravity="left"
+            android:onClick="onClick"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:text="关于"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+    </LinearLayout>
+<Button
+        android:onClick="onClick"
+        android:id="@+id/exit"
+        style="@style/base_button_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="退出" />
+</LinearLayout>

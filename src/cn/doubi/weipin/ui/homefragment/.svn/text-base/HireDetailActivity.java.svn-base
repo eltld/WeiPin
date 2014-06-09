@@ -1,0 +1,79 @@
+package cn.doubi.weipin.ui.homefragment;
+
+import android.text.TextUtils;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+import cn.doubi.weipin.R;
+import cn.doubi.weipin.ui.BaseActivity;
+
+public class HireDetailActivity extends BaseActivity {
+
+	private ListView mListView;
+
+	@Override
+	protected void onCreate(android.os.Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_hire_detail);
+		initViews();
+	};
+	@Override
+	protected void initViews() {
+		mListView = (ListView) findViewById(R.id.hireList);
+		mToudiBt = (Button) findViewById(R.id.toudibt);
+		initData();
+		String type = getIntent().getStringExtra("type");
+		if(!TextUtils.isEmpty(type)){
+			mToudiBt.setVisibility(View.GONE);
+		}else{
+			mToudiBt.setVisibility(View.VISIBLE);
+		}
+		String[] data = getIntent().getStringArrayExtra("oral");
+		mListView.setAdapter(new MyAdapter(data));
+	}
+
+	private String[] mItemTitles;
+	private Button mToudiBt;
+	
+	private void initData() {
+		mItemTitles = new String[]{this.getString(R.string.com_name),this.getString(R.string.gangwei),this.getString(R.string.oral_time_str),this.getString(R.string.com_address_str),this.getString(R.string.tel_number_str)};
+	}
+	@Override
+	public void onClick(View view) {
+		
+	}
+	class MyAdapter extends BaseAdapter{
+		private String[] mData;
+		public MyAdapter(String[] mData) {
+			this.mData = mData;
+		}
+		@Override
+		public int getCount() {
+			return mItemTitles.length;
+		}
+
+		@Override
+		public Object getItem(int arg0) {
+			return null;
+		}
+
+		@Override
+		public long getItemId(int arg0) {
+			return 0;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			View v = View.inflate(HireDetailActivity.this, R.layout.list_hire_item, null);
+			TextView title = (TextView) v.findViewById(R.id.hireTitle);
+			title.setText(mItemTitles[position]);
+			TextView content = (TextView) v.findViewById(R.id.hireContent);
+			content.setText(mData[position]);
+			return v;
+		}
+		
+	}
+}

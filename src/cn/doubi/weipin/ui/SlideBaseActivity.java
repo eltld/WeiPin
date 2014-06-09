@@ -1,0 +1,61 @@
+package cn.doubi.weipin.ui;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.widget.Toast;
+import cn.doubi.weipin.R;
+
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+import com.slidingmenu.lib.SlidingMenu;
+import com.slidingmenu.lib.app.SlidingFragmentActivity;
+/**
+ * 拥有侧滑属性的Activity基类
+ */
+public class SlideBaseActivity extends SlidingFragmentActivity {
+
+	protected Fragment mFrag;
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		// set the Behind View
+		setBehindContentView(R.layout.menu_frame);
+		if (savedInstanceState == null) {
+			FragmentTransaction t = this.getSupportFragmentManager().beginTransaction();
+			mFrag = new LeftFragment();
+			t.replace(R.id.menu_frame, mFrag);
+			t.commit();
+		} 
+
+		// customize the SlidingMenu
+		SlidingMenu sm = getSlidingMenu();
+		sm.setShadowWidthRes(R.dimen.shadow_width);
+		sm.setShadowDrawable(R.drawable.shadow);
+		sm.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+		sm.setFadeDegree(0.35f);
+		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			toggle();
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getSupportMenuInflater().inflate(R.menu.activity_main, menu);
+		return true;
+	}
+	/**
+	 * 显示一个提示
+	 */
+	public void showToast(String msg) {
+		Toast.makeText(getApplicationContext(),msg, Toast.LENGTH_SHORT).show();
+	}
+}

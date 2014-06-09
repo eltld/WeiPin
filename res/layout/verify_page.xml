@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/homeTitle"
+        style="@style/base_header_view"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="@string/verify_tel_str" />
+
+    <TextView
+        android:id="@+id/Verify_messagetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Verify_nextButton"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/send_verify_message"
+        android:textColor="@color/content_text_color"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/Verify_SendVerifyButton"
+        android:layout_marginLeft="10dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="手机号"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/Verify_EnterTelNumberEditText"
+        android:layout_width="155dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/homeTitle"
+        android:layout_marginTop="200dp"
+        android:layout_toLeftOf="@+id/Verify_SendVerifyButton"
+        android:layout_toRightOf="@+id/textView1"
+        android:background="#ffffff"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textColor="#555555"
+        android:textSize="19sp" />
+
+    <Button
+        android:id="@+id/Verify_SendVerifyButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/Verify_EnterTelNumberEditText"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/verify_bt_selector"
+        android:onClick="onClick"
+        android:text="@string/send_verfy_code"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Verify_EnterTelNumberEditText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="验证码"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/homeTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tuijianren"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="推荐人"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/Verify_tuijianren_EditText"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/Verify_EnterVerifyEditText"
+        android:layout_alignRight="@+id/Verify_EnterVerifyEditText"
+        android:layout_alignTop="@+id/tuijianren"
+        android:background="#ffffff"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:textColor="#555555"
+        android:visibility="gone"
+        android:textSize="19sp" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/Verify_nextButton"
+        style="@style/base_button_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tuijianren"
+        android:layout_marginTop="30dp"
+        android:onClick="onClick"
+        android:text="@string/next_str" />
+
+    <EditText
+        android:id="@+id/Verify_EnterVerifyEditText"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/Verify_nextButton"
+        android:layout_alignLeft="@+id/Verify_EnterTelNumberEditText"
+        android:layout_alignRight="@+id/Verify_SendVerifyButton"
+        android:background="#ffffff"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="phone"
+        android:maxLength="4"
+        android:singleLine="true"
+        android:textColor="#555555"
+        android:textSize="19sp" />
+
+</RelativeLayout>

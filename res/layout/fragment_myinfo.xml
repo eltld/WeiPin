@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+<TextView
+        android:id="@+id/homeTitle"
+        style="@style/base_header_view"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="资料" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/userid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/usertel"
+            android:layout_below="@+id/usertel"
+            android:text="用户ID"
+            android:layout_marginTop="5dp"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/usertel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="5dp"
+            android:text="手机号码"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/usercount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/userid"
+            android:layout_below="@+id/userid"
+            android:layout_marginTop="5dp"
+            android:text="面试次数:0"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/usercount"
+            android:isIndicator="true"
+            android:layout_marginLeft="-30dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/myinfo_listview"
+        style="@style/listview_style"
+        android:divider="#d4d4d4"
+        android:dividerHeight="1dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp" >
+    </ListView>
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/myinfo_edit_done_button"
+        style="@style/base_button_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="完成" />
+
+</LinearLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+<TextView
+        android:id="@+id/homeTitle"
+        style="@style/base_header_view"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="资料" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/userid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/usertel"
+            android:layout_below="@+id/usertel"
+            android:layout_marginTop="5dp"
+            android:text="用户ID"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/usertel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="5dp"
+            android:text="手机号码"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/usercount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/userid"
+            android:layout_below="@+id/userid"
+            android:layout_marginTop="5dp"
+            android:text="面试次数:0"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/usercount"
+            android:layout_marginLeft="-30dp"
+            android:isIndicator="true"
+            android:scaleX="0.5"
+            android:scaleY="0.5" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="姓名"
+                    android:textColor="#777777"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffffff"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="请输入姓名"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="#88000000"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#d4d4d4" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/idcard_tv"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="身份证"
+                    android:textColor="#777777"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/idcard_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffffff"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="请输入身份证号码"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="#88000000"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#d4d4d4" />
+
+ 
+            <LinearLayout
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/xinzi_tv"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="期望薪资"
+                    android:textColor="#777777"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/xinzi_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffffff"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="#88000000"
+                    android:text="3000~6000"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#d4d4d4" />
+
+            <LinearLayout
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/gongzhong_tv"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="工种"
+                    android:textColor="#777777"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffffff"
+                    android:ems="10"
+                    android:id="@+id/gongzhong_et"
+                    android:gravity="center_vertical"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="#88000000"
+                    android:text="不限"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#d4d4d4" />
+
+            <LinearLayout
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="目前状态"
+                    android:textColor="#777777"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/zhuangtai_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffffff"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:text="在职不急于找工作"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="#88000000"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/myinfo_edit_done_button"
+        style="@style/base_button_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:onClick="onClick"
+        android:text="完成" />
+
+</LinearLayout>

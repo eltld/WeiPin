@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+
+    <TextView
+        android:id="@+id/homeTitle"
+        style="@style/base_header_view"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="关于" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/homeTitle"
+        android:layout_marginTop="43dp"
+        android:text="   我们是一群久居城市的大男孩，深刻体会城市竞争的激烈与残酷我们深知数量代表不了一切，成功找到合适的工作才是王道
+我们关注每位用户的体验，打破简历的束缚发挥你的最大潜能
+我们期待陪伴你走入职场，帮助你在城市中扎下脚步
+我们精准收集你的信息，并将信息发挥到极致
+我们规划你的职业历程，你的每一步选择背后与我们息息相关
+2014，微聘踏上征程，你找到好工作，我们分享你的快乐。"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="#000000" />
+
+</RelativeLayout>

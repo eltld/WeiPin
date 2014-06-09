@@ -1,0 +1,120 @@
+package cn.doubi.weipin.domain;
+
+import java.io.Serializable;
+
+/**
+ * 面试信息
+ * 信息说明
+	   	面试信息id
+		用户编号
+		招聘信息编号
+		面试结果
+		创建时间
+		修改时间
+		说明: oral_rst面试结果(0-未通过,1-通过,2-未参加面试,3-取消面试)
+ */
+public class OralInfo implements Serializable
+{
+
+	private static final long serialVersionUID = 1L;
+
+	private String oral_id;
+	private String user_id;
+	private String hire_id;
+	private String oral_rst;
+	private String create_time;
+	private String modify_time;
+	private String companyName;   
+	private String companyAddress;
+	private String hireTitle;
+	private String linkTel;
+	private String oralRst;
+	public String getOral_id()
+	{
+		return oral_id;
+	}
+	public void setOral_id(String oral_id)
+	{
+		this.oral_id = oral_id;
+	}
+	public String getUser_id()
+	{
+		return user_id;
+	}
+	public void setUser_id(String user_id)
+	{
+		this.user_id = user_id;
+	}
+	public String getHire_id()
+	{
+		return hire_id;
+	}
+	public void setHire_id(String hire_id)
+	{
+		this.hire_id = hire_id;
+	}
+	public String getOral_rst()
+	{
+		return oral_rst;
+	}
+	public void setOral_rst(String oral_rst)
+	{
+		this.oral_rst = oral_rst;
+	}
+	public String getCreate_time()
+	{
+		return create_time;
+	}
+	public void setCreate_time(String create_time)
+	{
+		this.create_time = create_time;
+	}
+	public String getModify_time()
+	{
+		return modify_time;
+	}
+	public void setModify_time(String modify_time)
+	{
+		this.modify_time = modify_time;
+	}
+	@Override
+	public String toString()
+	{
+		return "OralInfo [oral_id=" + oral_id + ", user_id=" + user_id
+				+ ", hire_id=" + hire_id + ", oral_rst=" + oral_rst
+				+ ", create_time=" + create_time + ", modify_time="
+				+ modify_time + "]";
+	}
+	public String getCompanyName() {
+		return companyName;
+	}
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+	public String getCompanyAddress() {
+		return companyAddress;
+	}
+	public void setCompanyAddress(String companyAddress) {
+		this.companyAddress = companyAddress;
+	}
+	public String getHireTitle() {
+		return hireTitle;
+	}
+	public void setHireTitle(String hireTitle) {
+		this.hireTitle = hireTitle;
+	}
+	public String getLinkTel() {
+		return linkTel;
+	}
+	public void setLinkTel(String linkTel) {
+		this.linkTel = linkTel;
+	}
+	public String getOralRst() {
+		return oralRst;
+	}
+	public void setOralRst(String oralRst) {
+		this.oralRst = oralRst;
+	}
+	
+}
+

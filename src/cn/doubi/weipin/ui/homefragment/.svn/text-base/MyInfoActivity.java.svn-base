@@ -1,0 +1,201 @@
+package cn.doubi.weipin.ui.homefragment;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import net.tsz.afinal.http.AjaxCallBack;
+import net.tsz.afinal.http.AjaxParams;
+import android.app.ProgressDialog;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RatingBar;
+import android.widget.TextView;
+import cn.doubi.weipin.R;
+import cn.doubi.weipin.domain.ResultCode;
+import cn.doubi.weipin.domain.UrlContent;
+import cn.doubi.weipin.ui.BaseActivity;
+import cn.doubi.weipin.utils.Logger;
+import cn.doubi.weipin.utils.WeiPinUtil;
+
+import com.google.gson.Gson;
+
+public class MyInfoActivity extends BaseActivity {
+
+	private ListView mListView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_myinfo);
+		initViews();
+	}
+	@Override
+	protected void initViews() {
+		mListView = (ListView) findViewById(R.id.myinfo_listview);
+		mListView.setAdapter(new MyAdapter());
+		mRatingBar = (RatingBar) findViewById(R.id.ratingBar1);
+		TextView telview = (TextView) findViewById(R.id.usertel);
+		initData();
+		String tel = WeiPinUtil.getTelBySp(this);
+		telview.setText(tel);
+		findViewById(R.id.head_image).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				showToast("此功能敬请期待!");
+			}
+		});
+	}
+
+	private List<TitleAndHitData> mItems = new ArrayList<TitleAndHitData>();
+	private RatingBar mRatingBar;
+	private void initData() {
+		for (int i = 0; i <= 6; i++) {
+			TitleAndHitData t = new TitleAndHitData();
+			switch (i) {
+			case 0:
+				t.hit = "请输入姓名";
+				t.title = "姓名";
+				break;
+			case 1:
+				t.hit = "请输入身份证号码";
+				t.title = "身份证";
+				break;
+			case 2:
+				t.hit = "请输入性别";
+				t.title = "性别";
+				break;
+			case 3:
+				t.hit = "请输入您的期望薪酬";
+				t.title = "期望薪资";
+				
+				break;
+			case 4:
+				t.hit = "例如:IT互联网";
+				t.title = "意向行业";
+				
+				break;
+			case 5:
+				t.hit = "例如:研发工程师";
+				t.title = "工种";
+				break;
+
+			default:
+				break;
+			}
+			mItems.add(t);
+		}
+	}
+	private List<EditText> mEdits = new ArrayList<EditText>();
+	@Override
+	public void onClick(View view) {
+		//编辑完成提交信息
+		//TODO:想服务器提交个人信息
+		for (int i = 0; i < mListView.getChildCount(); i++) {
+			if(mListView.getChildAt(i) instanceof LinearLayout){
+				LinearLayout itemView = (LinearLayout) mListView.getChildAt(i);
+			if(itemView.getId() == R.id.myinfoitem){
+				for (int j = 0; j < itemView.getChildCount(); j++) {
+					if(itemView.getChildAt(j) instanceof EditText){
+						EditText et = (EditText) itemView.getChildAt(j);
+						if(TextUtils.isEmpty(et.getText().toString())){
+							showToast("个人信息不完整!");
+							return;
+						}else{
+								mEdits.add(et);
+						}
+					}
+				}
+			}
+		}
+		}
+		mRatingBar.setRating(5.0f);
+		commitUserInfo();
+	}
+	private String[] mParamsKey = new String[]{
+		"userName","userIdentitycard","userSex","userSalary","userTrade","userWork"
+	};
+	private void commitUserInfo(){
+		String userUrl = UrlContent.COMMIT_USERINFO_HEADERIMAGE;
+		AjaxParams params = new AjaxParams();
+		if(WeiPinUtil.isEditUserInfo(this)){
+			String userId = WeiPinUtil.getUserIdForXml(this);
+			if(!TextUtils.isEmpty(userId)){
+				userUrl = UrlContent.UPDATE_USER_INFO;
+				params.put("userId", userId); 
+			}
+		}
+		for (int i = 0; i < mEdits.size(); i++) {
+			if(mEdits.size() == mParamsKey.length){
+				String str = mEdits.get(i).getText().toString();
+				params.put(mParamsKey[i],str);
+			}
+		}
+		mEdits.clear();
+		getHttpClient().post(userUrl,params, new AjaxCallBack<String>() {
+			private ProgressDialog dialog;
+			@Override
+			public void onStart() {
+				dialog = showBaseProgressDialog();
+				super.onStart();
+			}
+			@Override
+			public void onSuccess(String t) {
+				dialog.dismiss();
+				Logger.i("USERINFO", t);
+				ResultCode code = new Gson().fromJson(t, ResultCode.class);
+				WeiPinUtil.saveEditUserInfoState(MyInfoActivity.this,code.getCode());
+				showCommitOkToast();
+				finish();
+				super.onSuccess(t);
+			}
+			@Override
+			public void onFailure(Throwable t, int errorNo, String strMsg) {
+				super.onFailure(t, errorNo, strMsg);
+				dialog.dismiss();
+				showNetErrorToast();
+				Logger.e("USERINFO", strMsg, t);
+			}
+		});
+	}
+	class MyAdapter extends BaseAdapter{
+
+		@Override
+		public int getCount() {
+			return 6;
+		}
+
+		@Override
+		public Object getItem(int arg0) {
+			return null;
+		}
+
+		@Override
+		public long getItemId(int arg0) {
+			return 0;
+		}
+
+		@Override
+		public View getView(int position, View arg1, ViewGroup arg2) {
+			View v = getLayoutInflater().inflate(R.layout.myinfo_listitem, null);
+			EditText edit = (EditText) v.findViewById(R.id.myinfoedittext);
+			TextView title = (TextView) v.findViewById(R.id.myinfotitle);
+			TitleAndHitData data = mItems.get(position);
+			edit.setHint(data.hit);
+			title.setText(data.title);
+			return v;
+		}
+		
+	}
+	class TitleAndHitData {
+		String title;
+		String hit;
+	}
+}

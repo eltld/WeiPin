@@ -1,0 +1,52 @@
+8
+
+dir
+8
+http://code.taobao.org/svn/weipin/trunk/.settings
+http://code.taobao.org/svn/weipin
+
+
+
+2014-04-05T11:12:31.104848Z
+4
+haicuan139
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b8eb5a7a-0f29-4652-b11f-64430a4c2b6f
+
+org.eclipse.core.resources.prefs
+file
+
+
+
+
+2014-04-11T11:46:20.000000Z
+64517faea93f969617144f7b248e5fe0
+2014-04-05T08:19:52.540711Z
+2
+haicuan139
+
+org.eclipse.jdt.core.prefs
+file
+
+
+
+
+2014-04-11T11:46:20.000000Z
+ef561c8a6f314527ba85565c7b496f01
+2014-04-05T11:12:31.104848Z
+4
+haicuan139
+

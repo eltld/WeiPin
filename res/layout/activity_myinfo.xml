@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/base_header" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:focusable="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/userEditTextLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:tag="userName"
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/userName"
+                android:inputType="textPersonName" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boy"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/girl"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <EditText
+                android:tag="userCode"
+                android:id="@+id/userIdCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="18"
+                android:hint="@string/userIdCard"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:tag="userTel"
+                android:id="@+id/userTelNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="11"
+                android:hint="@string/telNumber"
+                android:inputType="phone"
+                 />
+
+            <EditText
+                android:tag="userAddress"
+                android:id="@+id/userAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="50"
+                android:hint="@string/userAddress"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:tag="userTrade"
+                android:maxLength="50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/userVocation"
+                android:hint="@string/userVocation"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:tag="userSalary"
+                android:id="@+id/userExpectSalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:hint="@string/expectSalary"
+                 />
+
+            <EditText
+                android:tag="userYears"
+                android:id="@+id/userWorkYears"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:hint="@string/workYears"
+                 />
+
+            <EditText
+                android:tag="userWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/userEmployPosition"
+                android:hint="@string/employPosition"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="@string/editDone" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在这里选择用户性别，测试的时候默认是男,性别给出单选"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#00ff00" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

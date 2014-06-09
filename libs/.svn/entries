@@ -1,0 +1,115 @@
+8
+
+dir
+8
+http://code.taobao.org/svn/weipin/trunk/libs
+http://code.taobao.org/svn/weipin
+
+
+
+2014-04-11T11:39:58.385066Z
+8
+haicuan139
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b8eb5a7a-0f29-4652-b11f-64430a4c2b6f
+
+Android_Location_V1.0.5.jar
+file
+
+
+
+
+2014-04-11T11:46:17.000000Z
+e608b59151a24ad217ba69278c759492
+2014-04-11T11:39:58.385066Z
+8
+haicuan139
+has-props
+
+Android_Map_V2.0.4.jar
+file
+
+
+
+
+2014-04-11T11:46:11.000000Z
+e4ee01e51b58b217d36340941a18cdcc
+2014-04-11T11:39:58.385066Z
+8
+haicuan139
+has-props
+
+Android_Services_V2.0.4.jar
+file
+
+
+
+
+2014-04-11T11:46:13.000000Z
+45a1404a6e8c4d6eea862f47acdc1fcf
+2014-04-11T11:39:58.385066Z
+8
+haicuan139
+has-props
+
+afinal.jar
+file
+
+
+
+
+2014-04-11T11:46:14.000000Z
+88dc08e9241a90b2632fddc1f36c126b
+2014-04-05T08:19:52.540711Z
+2
+haicuan139
+has-props
+
+armeabi
+dir
+
+gson.jar
+file
+
+
+
+
+2014-04-11T11:46:13.000000Z
+232ea9ab7ec43b8b2ef36181ee7d693b
+2014-04-05T08:19:52.540711Z
+2
+haicuan139
+has-props
+
+mips
+dir
+
+pushservice-3.2.0.jar
+file
+
+
+
+
+2014-04-11T11:46:17.000000Z
+2d76d6729b8eca65af2aa974af917a0f
+2014-04-09T11:11:01.290840Z
+7
+haicuan139
+has-props
+
+x86
+dir
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#00000000"
+   	android:orientation="horizontal"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:maxLength="10"
+        android:id="@+id/min_edit"
+        android:layout_width="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="最低"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:inputType="phone" >
+        <requestFocus />
+    </EditText>
+
+    <TextView 
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="～"
+        />
+    <EditText
+        android:hint="最高"
+        android:maxLength="10"
+        android:id="@+id/max_edit"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="phone" >
+        <requestFocus />
+    </EditText>
+</LinearLayout>

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/weipin/!svn/ver/8/trunk/src/cn/doubi/weipin/utils
+END
+Constants.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/weipin/!svn/ver/8/trunk/src/cn/doubi/weipin/utils/Constants.java
+END
+AMapUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/weipin/!svn/ver/8/trunk/src/cn/doubi/weipin/utils/AMapUtil.java
+END
+ToastUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/weipin/!svn/ver/8/trunk/src/cn/doubi/weipin/utils/ToastUtil.java
+END
+WeiPinUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/weipin/!svn/ver/15/trunk/src/cn/doubi/weipin/utils/WeiPinUtil.java
+END
+ChString.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/weipin/!svn/ver/8/trunk/src/cn/doubi/weipin/utils/ChString.java
+END
+PushUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/weipin/!svn/ver/13/trunk/src/cn/doubi/weipin/utils/PushUtils.java
+END
+Logger.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/utils/Logger.java
+END
+SharedPreferencesManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/weipin/!svn/ver/7/trunk/src/cn/doubi/weipin/utils/SharedPreferencesManager.java
+END

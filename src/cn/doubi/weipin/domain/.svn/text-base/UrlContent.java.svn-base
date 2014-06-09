@@ -1,0 +1,28 @@
+package cn.doubi.weipin.domain;
+
+public interface UrlContent {
+
+	String BASE_URL = "http://115.28.136.194:8088/wp/";
+	/**
+	 * 面试信息列表
+	 */
+	String HIRELIST_URL = BASE_URL+"oralinfo/queryList.ac";
+	
+	/**
+	 * 没有头像的地址
+	 */
+	String COMMIT_USERINFO = BASE_URL+"user/save.ac";
+	/**
+	 *带头像参数的地址 
+	 */
+	String COMMIT_USERINFO_HEADERIMAGE = BASE_URL+"user/register.ac";
+	/**
+	 * 验证短信
+	 */
+	String SEND_TEL_MESSAGE = BASE_URL+"/push/pushshortinfo.ac";
+	/**
+	 * 更新用户资料
+	 */
+	String UPDATE_USER_INFO = BASE_URL+"user/update.ac";
+	
+}
