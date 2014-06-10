@@ -125,12 +125,14 @@ public class FragmentMyInfoNew extends BaseActivity implements OnClickListener {
 				float score = 0.0f;
 				if(!TextUtils.isEmpty(t)){
 					List<UserScore> us = new Gson().fromJson(t,  new TypeToken<List<UserScore>>(){}.getType());
-					UserScore u = us.get(0);
-					score = (u.getScore_oral() + u.getScore_tel() + u.getScore_work())/3;
-					if(score > 5.0f){
-						score = 5;
+					if(us != null){
+						UserScore u = us.get(0);
+						score = (u.getScore_oral() + u.getScore_tel() + u.getScore_work())/3;
+						if(score > 5.0f){
+							score = 5;
+						}
+						ratingBar.setRating(score);
 					}
-					ratingBar.setRating(score);
 				}
 			}
 		});
