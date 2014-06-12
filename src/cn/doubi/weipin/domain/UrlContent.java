@@ -34,9 +34,13 @@ public interface UrlContent {
 	 * 投递
 	 */
 	String OREL_TOUDI = BASE_URL+"oralinfo/applyoral.ac";
-	
+	/**
+	 * 建议反馈
+	 */
 	String URL_SUGGEST = BASE_URL+"feedback/save.ac";
 	
-	
+	/**
+	 * 评分
+	 */
 	String URL_USER_SCORE  = BASE_URL + "userscore/findbyuserid.ac";
 }
