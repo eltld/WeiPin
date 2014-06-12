@@ -2,7 +2,7 @@ package cn.doubi.weipin.domain;
 
 public interface UrlContent {
 
-	String BASE_URL = "http://182.92.75.101:8080/wp/";
+	String BASE_URL = "http://182.92.75.101/wp/";
 	/**
 	 * 面试信息列表
 	 */
