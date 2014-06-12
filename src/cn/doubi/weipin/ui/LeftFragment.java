@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import cn.doubi.weipin.R;
+import cn.doubi.weipin.ui.homefragment.FragmentMyInfoNew;
 /**
  * 侧边栏Fragment
  */
@@ -44,7 +45,7 @@ public class LeftFragment extends Fragment implements OnClickListener{
 			startActivity(new Intent(getActivity(),MyOralInfoListActivity.class));
 			break;
 		case R.id.myinfoButton:
-			startActivity(new Intent(getActivity(),MyInfoActivity.class));
+			startActivity(new Intent(getActivity(),FragmentMyInfoNew.class));
 			break;
 		case R.id.shareFriendButton:
 			Toast.makeText(getActivity(), "分享给好友", Toast.LENGTH_SHORT).show();

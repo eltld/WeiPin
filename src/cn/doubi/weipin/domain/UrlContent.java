@@ -19,12 +19,12 @@ public interface UrlContent {
 	/**
 	 * 验证短信
 	 */
-	String SEND_TEL_MESSAGE = BASE_URL+"/push/pushshortinfo.ac";
+	String SEND_TEL_MESSAGE = BASE_URL+"push/pushshortinfo.ac";
 	/**
 	 * 更新用户资料
 	 */
 	String UPDATE_USER_INFO = BASE_URL+"user/update.ac";
-	
+	 
 	/**
 	 * App更新地址
 	 */
@@ -38,5 +38,5 @@ public interface UrlContent {
 	String URL_SUGGEST = BASE_URL+"feedback/save.ac";
 	
 	
-	String URL_USER_SCORE  = BASE_URL + "/userscore/findbyuserid.ac";
+	String URL_USER_SCORE  = BASE_URL + "userscore/findbyuserid.ac";
 }

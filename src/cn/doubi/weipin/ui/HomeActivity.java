@@ -32,7 +32,7 @@ import cn.doubi.weipin.domain.UpdateObj;
 import cn.doubi.weipin.domain.UrlContent;
 import cn.doubi.weipin.push.MyPushMessageReceiver;
 import cn.doubi.weipin.service.WeiPinService;
-import cn.doubi.weipin.ui.homefragment.MyInfoActivity;
+import cn.doubi.weipin.ui.homefragment.FragmentMyInfoNew;
 import cn.doubi.weipin.ui.homefragment.VerifyActivity;
 import cn.doubi.weipin.utils.PushUtils;
 import cn.doubi.weipin.utils.SharedPreferencesManager;
@@ -64,7 +64,7 @@ public class HomeActivity extends SlideBaseActivity {
 			startActivity(new Intent(this, VerifyActivity.class));
 		}
 		if(WeiPinUtil.isVerify(this) && !WeiPinUtil.isEditUserInfo(this)){
-			startActivity(new Intent(this, MyInfoActivity.class));
+			startActivity(new Intent(this, FragmentMyInfoNew.class));
 		}
 		startPushMessageActivity();
 		startService(new Intent(this, WeiPinService.class));

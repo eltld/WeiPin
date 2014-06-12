@@ -29,7 +29,6 @@ public class VerifyActivity extends BaseActivity{
 	private TextView mMessageText;
 	private EditText mVerifyEditText;
 	private EditText mTelEditText;
-	private EditText mTuijianren;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +42,6 @@ public class VerifyActivity extends BaseActivity{
 		mVerifyEditText = (EditText)findViewById(R.id.Verify_EnterVerifyEditText);
 		mMessageText = (TextView) findViewById(R.id.Verify_messagetext);
 		mSendCodeButton = (Button) findViewById(R.id.Verify_SendVerifyButton);
-		mTuijianren = (EditText) findViewById(R.id.Verify_tuijianren_EditText);
 	}
 
 	@Override

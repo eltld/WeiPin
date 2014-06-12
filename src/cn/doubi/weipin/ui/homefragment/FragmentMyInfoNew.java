@@ -20,7 +20,6 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import cn.doubi.weipin.R;
-import cn.doubi.weipin.domain.OralInfo;
 import cn.doubi.weipin.domain.ResultCode;
 import cn.doubi.weipin.domain.UrlContent;
 import cn.doubi.weipin.domain.UserScore;
