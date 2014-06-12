@@ -16,8 +16,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/homeTitle"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/imageView1"
         android:text="   我们是一群久居城市的大男孩，深刻体会城市竞争的激烈与残酷我们深知数量代表不了一切，成功找到合适的工作才是王道
 我们关注每位用户的体验，打破简历的束缚发挥你的最大潜能
 我们期待陪伴你走入职场，帮助你在城市中扎下脚步
@@ -27,5 +27,14 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/homeTitle"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
 
 </RelativeLayout>
