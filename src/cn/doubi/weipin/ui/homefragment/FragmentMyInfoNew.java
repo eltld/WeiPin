@@ -77,7 +77,7 @@ public class FragmentMyInfoNew extends BaseActivity implements OnClickListener {
 		String idCard = mUerInfoCache.get(mParamsKey[1]);
 		String xinzi = mUerInfoCache.get(mParamsKey[2]);
 		String gongzhong = mUerInfoCache.get(mParamsKey[3]);
-		String zhuangtai = mUerInfoCache.get(mParamsKey[3]);
+		String zhuangtai = mUerInfoCache.get(mParamsKey[4]);
 		if (TextUtils.isEmpty(userName)) {
 			// 没填写过
 			ratingBar.setRating(0f);
@@ -122,13 +122,15 @@ public class FragmentMyInfoNew extends BaseActivity implements OnClickListener {
 				super.onSuccess(t);
 				Logger.i("score", t);
 				float score = 0.0f;
-				if(!TextUtils.isEmpty(t)){
+				if(!TextUtils.isEmpty(t) && t.contains("scoreWork")){
 					List<UserScore> us = new Gson().fromJson(t,  new TypeToken<List<UserScore>>(){}.getType());
 					if(us != null){
 						UserScore u = us.get(0);
-						score = (u.getScore_oral() + u.getScore_tel() + u.getScore_work())/3;
-						if(score > 5.0f){
-							score = 5;
+						if(u != null){
+							score = (u.getScore_oral() + u.getScore_tel() + u.getScore_work())/3;
+							if(score > 5.0f){
+								score = 5;
+							}
 						}
 						ratingBar.setRating(score);
 					}
