@@ -169,7 +169,7 @@ public class LuYongFragment extends BaseFragment implements OnItemClickListener{
 				holder.number = (TextView) view.findViewById(R.id.oralitemnumber);
 				holder.time = (TextView) view.findViewById(R.id.oralitemtime);
 				holder.gangwei = (TextView) view.findViewById(R.id.oralgangwei);
-				
+				holder.salay = (TextView) view.findViewById(R.id.xinchou);	
 				
 				view.setTag(holder);
 			}
@@ -179,6 +179,8 @@ public class LuYongFragment extends BaseFragment implements OnItemClickListener{
 			holder.address.setText("地址:"+info.getCompanyAddress());
 			holder.number.setText((position+1)+"");
 			holder.time.setText(info.getCreate_time());
+			holder.salay.setText("薪酬:"+info.getSalay());
+			
 			return view;
 		}
 		
@@ -189,6 +191,7 @@ public class LuYongFragment extends BaseFragment implements OnItemClickListener{
 		TextView number;
 		TextView address;
 		TextView gangwei;
+		TextView salay;
 	}
 	@Override
 	public void onItemClick(AdapterView<?> pview, View view, int position, long id) {

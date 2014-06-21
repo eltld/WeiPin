@@ -132,9 +132,9 @@ public class FragmentMyInfoNew extends BaseActivity implements OnClickListener {
 								score = 5;
 							}
 						}
-						ratingBar.setRating(score);
 					}
 				}
+				ratingBar.setRating(score);
 			}
 		});
 		}
