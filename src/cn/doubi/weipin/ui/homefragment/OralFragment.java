@@ -172,23 +172,26 @@ public class OralFragment extends BaseFragment implements OnItemClickListener{
 				holder = (ViewHolder) view.getTag();
 			}else{
 				holder = new ViewHolder();
-				view = View.inflate(getActivity(), R.layout.list_oral_item, null);
+				view = View.inflate(getActivity(), R.layout.mianshi_list_oral_item, null);
 				holder.title = (TextView) view.findViewById(R.id.oralItemTitle);
 				holder.address = (TextView) view.findViewById(R.id.oralImteAddr);
 				holder.number = (TextView) view.findViewById(R.id.oralitemnumber);
 				holder.time = (TextView) view.findViewById(R.id.oralitemtime);
 				holder.gangwei = (TextView) view.findViewById(R.id.oralgangwei);
 				holder.salay = (TextView) view.findViewById(R.id.xinchou);
-				
+				holder.workaddress = (TextView) view.findViewById(R.id.worktype);//面试地点
+				holder.passButton = (TextView) view.findViewById(R.id.passbutton);
 				view.setTag(holder);
 			}
 			OralInfo info = mInfos.get(position);
 			holder.title.setText(info.getCompanyName());
-			holder.gangwei.setText(info.getHireTitle());
-			holder.address.setText("地址:"+info.getCompanyAddress());
+			holder.gangwei.setText("面试时间:"+info.getCreate_time());//TODO：面试时间，改为getHireTime
+			holder.address.setText("联系人:王大锤");//联系人
 			holder.number.setText((position+1)+"");
 			holder.time.setText(info.getCreate_time());
-			holder.salay.setText("薪酬:"+info.getSalay());
+			holder.salay.setText("面试编号:"+info.getHire_id());//改为面试编号
+			holder.workaddress.setText("面试地点:北京市大锤路大锤大厦XXXXXXX");//面试地点
+			
 			return view;
 		}
 		
@@ -197,18 +200,23 @@ public class OralFragment extends BaseFragment implements OnItemClickListener{
 		TextView title;
 		TextView time;
 		TextView number;
-		TextView address;
-		TextView gangwei;
+		TextView address;//联系人
+		TextView gangwei;//面试时间
 		TextView salay;
+		TextView workaddress;//面试地点
+		TextView tel;//联系电话
+		TextView passButton;
+		
 	}
 	@Override
 	public void onItemClick(AdapterView<?> pview, View view, int position, long id) {
 		OralInfo info = (OralInfo) mMyAdapter.getItem(position-1);
 		//构造一个数组
 		Intent i = new Intent(getActivity(),HireDetailActivity.class);
-		String[] data = new String[]{info.getCompanyName(),info.getHireTitle(),info.getCreate_time(),info.getCompanyAddress(),info.getLinkTel(),info.getOral_id()};
+		String[] data = new String[]{info.getCompanyName(),info.getHireTitle(),info.getCreate_time(),info.getCompanyAddress(),info.getLinkTel(),info.getSalay()+"/月(税前)","10年",info.getOral_id()};
 		i.putExtra("oral", data);
-		i.putExtra("type", "offer");
+		i.putExtra("type", "oral");
+		i.putExtra("oralState", 4);
 		startActivity(i);
 	}
 }

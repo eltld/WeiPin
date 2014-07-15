@@ -46,6 +46,7 @@
     <string name="salary_str">薪酬</string>
     <string name="com_address_str">面试地址</string>
     <string name="tel_number_str">联系电话</string>
+    <string name="tel_yeartime">工作年限</string>
     <string name="next_str">下一步</string>
     <string name="verify_tel_str">验证</string>
     <string name="enter_tel_number_str">输入手机号码</string>

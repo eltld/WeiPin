@@ -163,23 +163,25 @@ public class LuYongFragment extends BaseFragment implements OnItemClickListener{
 				holder = (ViewHolder) view.getTag();
 			}else{
 				holder = new ViewHolder();
-				view = View.inflate(getActivity(), R.layout.list_oral_item, null);
+				view = View.inflate(getActivity(), R.layout.luyong_list_oral_item, null);
 				holder.title = (TextView) view.findViewById(R.id.oralItemTitle);
-				holder.address = (TextView) view.findViewById(R.id.oralImteAddr);
+//				holder.address = (TextView) view.findViewById(R.id.oralImteAddr);
 				holder.number = (TextView) view.findViewById(R.id.oralitemnumber);
 				holder.time = (TextView) view.findViewById(R.id.oralitemtime);
 				holder.gangwei = (TextView) view.findViewById(R.id.oralgangwei);
 				holder.salay = (TextView) view.findViewById(R.id.xinchou);	
+				holder.worktype = (TextView) view.findViewById(R.id.worktype);	
 				
 				view.setTag(holder);
 			}
 			OralInfo info = mInfos.get(position);
 			holder.title.setText(info.getCompanyName());
-			holder.gangwei.setText(info.getHireTitle());
-			holder.address.setText("地址:"+info.getCompanyAddress());
+			holder.gangwei.setText("工作类型:"+info.getHireTitle());
+//			holder.address.setText("地址:"+info.getCompanyAddress());
 			holder.number.setText((position+1)+"");
 			holder.time.setText(info.getCreate_time());
 			holder.salay.setText("薪酬:"+info.getSalay());
+			
 			
 			return view;
 		}
@@ -192,13 +194,14 @@ public class LuYongFragment extends BaseFragment implements OnItemClickListener{
 		TextView address;
 		TextView gangwei;
 		TextView salay;
+		TextView worktype;
 	}
 	@Override
 	public void onItemClick(AdapterView<?> pview, View view, int position, long id) {
 		OralInfo info = (OralInfo) mMyAdapter.getItem(position-1);
 		//构造一个数组
 		Intent i = new Intent(getActivity(),HireDetailActivity.class);
-		String[] data = new String[]{info.getCompanyName(),info.getHireTitle(),info.getCreate_time(),info.getCompanyAddress(),info.getLinkTel()};
+		String[] data = new String[]{info.getCompanyName(),info.getHireTitle(),info.getCreate_time(),info.getCompanyAddress(),info.getLinkTel(),info.getSalay()+"/月(税前)","10年",info.getOral_id()};
 		i.putExtra("oral", data);
 		i.putExtra("type", "offer");
 		startActivity(i);

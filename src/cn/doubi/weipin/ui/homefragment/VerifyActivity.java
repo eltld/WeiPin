@@ -116,6 +116,7 @@ public class VerifyActivity extends BaseActivity{
 				if(c != null){
 					code = c.getValidateCode();
 					Logger.i("code", code);
+//					showToast("验证码:"+code);
 				}else{
 					showToast("验证码有问题");
 				}
