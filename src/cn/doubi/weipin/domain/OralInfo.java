@@ -18,17 +18,21 @@ public class OralInfo implements Serializable
 
 	private static final long serialVersionUID = 1L;
 
-	private String oralId;
+	private String oralId;//面试ID
 	private String userId;
-	private String hireId;
-	private String oralRst;
-	private String createTime;
-	private String modifyTime;
-	private String companyName;   
-	private String companyAddress;
-	private String hireTitle;
-	private String linkTel;
-	private String salay;
+	private String hireId;//
+	private String oralRst;//面试状态
+	private String createTime;//创建时间
+	private String modifyTime;//修改时间
+	private String companyName;   //公司名称
+	private String companyAddress;//公司地址
+	private String hireTitle;//
+	private String linkTel;//联系电话
+	private String salay; //薪资
+	private String oralTime;//面试时间
+	private String workType;//工作类型
+	private String linkMan;//联系人
+	private String offerTime;//入职时间
 	public String getOral_id()
 	{
 		return oralId;
@@ -120,6 +124,30 @@ public class OralInfo implements Serializable
 	}
 	public void setSalay(String salay) {
 		this.salay = salay;
+	}
+	public String getOfferTime() {
+		return offerTime;
+	}
+	public void setOfferTime(String offerTime) {
+		this.offerTime = offerTime;
+	}
+	public String getLinkMan() {
+		return linkMan;
+	}
+	public void setLinkMan(String linkMan) {
+		this.linkMan = linkMan;
+	}
+	public String getWorkType() {
+		return workType;
+	}
+	public void setWorkType(String workType) {
+		this.workType = workType;
+	}
+	public String getOralTime() {
+		return oralTime;
+	}
+	public void setOralTime(String oralTime) {
+		this.oralTime = oralTime;
 	}
 	
 }

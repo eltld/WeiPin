@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import cn.doubi.weipin.R;
@@ -171,7 +172,7 @@ public class LuYongFragment extends BaseFragment implements OnItemClickListener{
 				holder.gangwei = (TextView) view.findViewById(R.id.oralgangwei);
 				holder.salay = (TextView) view.findViewById(R.id.xinchou);	
 				holder.worktype = (TextView) view.findViewById(R.id.worktype);	
-				
+				holder.passbutton = (TextView) view.findViewById(R.id.passbutton);
 				view.setTag(holder);
 			}
 			OralInfo info = mInfos.get(position);
@@ -181,8 +182,9 @@ public class LuYongFragment extends BaseFragment implements OnItemClickListener{
 			holder.number.setText((position+1)+"");
 			holder.time.setText(info.getCreate_time());
 			holder.salay.setText("薪酬:"+info.getSalay());
-			
-			
+			if(info.getOral_rst().equals("3")){
+				holder.passbutton.setText("已入职");
+			}			
 			return view;
 		}
 		
@@ -195,6 +197,7 @@ public class LuYongFragment extends BaseFragment implements OnItemClickListener{
 		TextView gangwei;
 		TextView salay;
 		TextView worktype;
+		TextView passbutton;
 	}
 	@Override
 	public void onItemClick(AdapterView<?> pview, View view, int position, long id) {

@@ -146,37 +146,20 @@ public class HireDetailActivity extends BaseActivity {
 				+ "入职时间:" + mDatas[2] + "\n" + "入职地址:" + mDatas[3]
 				+ "\n" + "联系人:" + "陈先生" + "\n" + "联系电话:" + mDatas[4];
 		if (!TextUtils.isEmpty(type)) {
-			if (type.contains("offer")) {
-				mListView.setVisibility(View.GONE);
-				scr = "尊敬的" + info.get("userName")
-						+ "：\n您的入职时间已确认，请您携带本人身份证前往一下地址办理入职手续\n" + mianshiContent
-						+ "\n\n分享您的成功经历，您将有机会双喜临门，抽取APPLE IPHONE6大奖（预约）。";
-				
-			} else if ("oral".equals(type)) {
+			 if ("oral".equals(type) || "offer".equals(type)) {
 				mListView.setVisibility(View.GONE);
 				int oralState = getIntent().getIntExtra("oralState", 0);
-				switch (oralState) {
-				case 0:
-					
-					break;
-				case 1:
-					
-					break;
-				case 2:
-					String share = "长按本信息分享您的喜悦，让更多好友找工作只需要动动手。";
-					scr = "尊敬的"+info.get("userName")+"：\n我们很高兴的通知您，您已通过"+mDatas[0]+"公司"+mDatas[1]+"职位税前月薪"+mDatas[5	]+"元的面试，请您保持手机通信畅通，我们会在48小时内与您联系并确认入职时间。\n"+share;
-					break;
-				case 3:
-					
-					break;
-				case 4:
+				if(oralState == 4){
 					String share1 = "只需要您分享本信息，即可更多获得5次工作推荐机会，希望您再接再厉。";
 					String s = mDatas[0]+"公司"+mDatas[1]+"职位的面试。";
 					scr = "尊敬的"+info.get("userName")+"：\n我们很遗憾的通知您，您没有通过"+s+"\n"+share1;
-					break;
-
-				default:
-					break;
+				}else if(oralState == 2){
+					scr = "尊敬的" + info.get("userName")
+							+ "：\n您的入职时间已确认，请您携带本人身份证前往一下地址办理入职手续\n" + mianshiContent
+							+ "\n\n分享您的成功经历，您将有机会双喜临门，抽取APPLE IPHONE6大奖（预约）。";
+				}else{
+					String share = "长按本信息分享您的喜悦，让更多好友找工作只需要动动手。";
+					scr = "尊敬的"+info.get("userName")+"：\n我们很高兴的通知您，您已通过"+mDatas[0]+"公司"+mDatas[1]+"职位税前月薪"+mDatas[5	]+"元的面试，请您保持手机通信畅通，我们会在48小时内与您联系并确认入职时间。\n"+share;
 				}
 
 			}
@@ -203,7 +186,7 @@ public class HireDetailActivity extends BaseActivity {
 				this.getString(R.string.oral_time_str),
 				this.getString(R.string.com_address_str),
 				this.getString(R.string.tel_number_str),
-				this.getString(R.string.salary_str),
+				this.getString(R.string.dsalary_str),
 				this.getString(R.string.tel_yeartime) };
 	}
 
