@@ -142,9 +142,9 @@ public class HireDetailActivity extends BaseActivity {
 				+ info.get("userName")
 				+ "：\n我们已确认您的面试时间，请您参见以下内容并牢记面试编号,请您携带个人身份证件，学历和技能证书（复印件）前往，如面试时间冲突，请致电调整。";
 		String mianshiContent = "公司名称:"
-				+ mDatas[0] + "\n" + "月薪:" + mDatas[5] + "/月(税前)\n"
+				+ mDatas[0] + "\n" + "月薪:" + mDatas[5] + "元/月(税前)\n"
 				+ "入职时间:" + mDatas[2] + "\n" + "入职地址:" + mDatas[3]
-				+ "\n" + "联系人:" + "陈先生" + "\n" + "联系电话:" + mDatas[4];
+				+ "\n" + "联系人:" + mDatas[8] + "\n" + "联系电话:" + mDatas[4];
 		if (!TextUtils.isEmpty(type)) {
 			 if ("oral".equals(type) || "offer".equals(type)) {
 				mListView.setVisibility(View.GONE);

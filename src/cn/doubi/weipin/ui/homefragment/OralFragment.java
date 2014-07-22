@@ -181,16 +181,18 @@ public class OralFragment extends BaseFragment implements OnItemClickListener{
 				holder.salay = (TextView) view.findViewById(R.id.xinchou);
 				holder.workaddress = (TextView) view.findViewById(R.id.worktype);//面试地点
 				holder.passButton = (TextView) view.findViewById(R.id.passbutton);
+				holder.tel = (TextView) view.findViewById(R.id.tel);
 				view.setTag(holder);
 			}
 			OralInfo info = mInfos.get(position);
 			holder.title.setText(info.getCompanyName());
 			holder.gangwei.setText("面试时间:"+info.getCreate_time());//TODO：面试时间，改为getHireTime
-			holder.address.setText("联系人:王大锤");//联系人
+			holder.address.setText("联系人:"+info.getComLinkman());//联系人
 			holder.number.setText((position+1)+"");
 			holder.time.setText(info.getCreate_time());
+			holder.tel.setText("联系电话:"+info.getComTel());
 			holder.salay.setText("面试编号:"+info.getHire_id());//改为面试编号
-			holder.workaddress.setText("面试地点:北京市大锤路大锤大厦XXXXXXX");//面试地点
+			holder.workaddress.setText("面试地点:"+info.getCompanyAddress());//面试地点
 			if(info.getOral_rst().equals("4")){
 				holder.passButton.setText("未通过");
 			}
@@ -216,7 +218,7 @@ public class OralFragment extends BaseFragment implements OnItemClickListener{
 		OralInfo info = (OralInfo) mMyAdapter.getItem(position-1);
 		//构造一个数组
 		Intent i = new Intent(getActivity(),HireDetailActivity.class);
-		String[] data = new String[]{info.getCompanyName(),info.getHireTitle(),info.getCreate_time(),info.getCompanyAddress(),info.getLinkTel(),info.getSalay()+"/月(税前)","10年",info.getOral_id()};
+		String[] data = new String[]{info.getCompanyName(),info.getHireTitle(),info.getOralTime(),info.getCompanyAddress(),info.getComTel(),info.getSalay(),info.getWorkYear()+"年",info.getOral_id(),info.getComLinkman()};
 		i.putExtra("oral", data);
 		i.putExtra("type", "oral");
 		i.putExtra("oralState", 2);

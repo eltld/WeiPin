@@ -130,7 +130,7 @@
         <receiver
             android:name="cn.doubi.weipin.push.MyPushMessageReceiver"
             tools:ignore="ExportedReceiver" >
-            <intent-filter>
+            <intent-filter> 
                 <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
                 <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
                 <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />

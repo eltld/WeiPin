@@ -28,11 +28,15 @@ public class OralInfo implements Serializable
 	private String companyAddress;//公司地址
 	private String hireTitle;//
 	private String linkTel;//联系电话
+	private String comTel;//练习电话
 	private String salay; //薪资
 	private String oralTime;//面试时间
-	private String workType;//工作类型
+	private String hireType;//工作类型
 	private String linkMan;//联系人
+	private String comLinkman;//联系人
+	private String empAddress;//入职地址
 	private String offerTime;//入职时间
+	private String workYear;
 	public String getOral_id()
 	{
 		return oralId;
@@ -137,17 +141,41 @@ public class OralInfo implements Serializable
 	public void setLinkMan(String linkMan) {
 		this.linkMan = linkMan;
 	}
-	public String getWorkType() {
-		return workType;
-	}
-	public void setWorkType(String workType) {
-		this.workType = workType;
-	}
 	public String getOralTime() {
 		return oralTime;
 	}
 	public void setOralTime(String oralTime) {
 		this.oralTime = oralTime;
+	}
+	public String getHireType() {
+		return hireType;
+	}
+	public void setHireType(String hireType) {
+		this.hireType = hireType;
+	}
+	public String getWorkYear() {
+		return workYear;
+	}
+	public void setWorkYear(String workYear) {
+		this.workYear = workYear;
+	}
+	public String getComTel() {
+		return comTel;
+	}
+	public void setComTel(String comTel) {
+		this.comTel = comTel;
+	}
+	public String getComLinkman() {
+		return comLinkman;
+	}
+	public void setComLinkman(String comLinkman) {
+		this.comLinkman = comLinkman;
+	}
+	public String getEmpAddress() {
+		return empAddress;
+	}
+	public void setEmpAddress(String empAddress) {
+		this.empAddress = empAddress;
 	}
 	
 }

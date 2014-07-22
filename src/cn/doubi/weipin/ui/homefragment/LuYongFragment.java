@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import cn.doubi.weipin.R;
@@ -190,21 +189,27 @@ public class LuYongFragment extends BaseFragment implements OnItemClickListener{
 		
 	}
 	static class ViewHolder{
-		TextView title;
-		TextView time;
-		TextView number;
-		TextView address;
-		TextView gangwei;
-		TextView salay;
-		TextView worktype;
-		TextView passbutton;
+		TextView title; //公司名称
+		TextView time; //发布时间
+		TextView oralTime; //面试时间
+		TextView number; //当前编号
+		TextView oralId; //面试ID
+		TextView address; // 地址
+		TextView gangwei; // 岗位
+		TextView salay; //薪资
+		TextView worktype; //工作类型
+		TextView passbutton; //通过标识按钮
+		TextView oralAddress; //面试地址
+		TextView linkMan;//联系人
+		TextView linkTel;//联系电话
+		
 	}
 	@Override
 	public void onItemClick(AdapterView<?> pview, View view, int position, long id) {
 		OralInfo info = (OralInfo) mMyAdapter.getItem(position-1);
 		//构造一个数组
 		Intent i = new Intent(getActivity(),HireDetailActivity.class);
-		String[] data = new String[]{info.getCompanyName(),info.getHireTitle(),info.getCreate_time(),info.getCompanyAddress(),info.getLinkTel(),info.getSalay()+"/月(税前)","10年",info.getOral_id()};
+		String[] data = new String[]{info.getCompanyName(),info.getHireTitle(),info.getOralTime(),info.getCompanyAddress(),info.getComTel(),info.getSalay(),info.getWorkYear()+"年",info.getOral_id(),info.getComLinkman()};
 		i.putExtra("oral", data);
 		i.putExtra("type", "offer");
 		startActivity(i);

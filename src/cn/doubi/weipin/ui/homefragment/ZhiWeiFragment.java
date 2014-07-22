@@ -181,7 +181,7 @@ public class ZhiWeiFragment extends BaseFragment implements OnItemClickListener{
 			holder.address.setText("地址:"+info.getCompanyAddress());
 			holder.number.setText((position+1)+"");
 			holder.time.setText(info.getCreate_time());
-			holder.salay.setText("薪酬:"+info.getSalay()+"/月(税前)");
+			holder.salay.setText("薪酬:"+info.getSalay()+"元/月(税前)");
 			return view;
 		}
 		
@@ -199,7 +199,7 @@ public class ZhiWeiFragment extends BaseFragment implements OnItemClickListener{
 		OralInfo info = (OralInfo) mMyAdapter.getItem(position-1);
 		//构造一个数组
 		Intent i = new Intent(getActivity(),HireDetailActivity.class);
-		String[] data = new String[]{info.getCompanyName(),info.getHireTitle(),info.getCreate_time(),info.getCompanyAddress(),info.getLinkTel(),info.getSalay()+"/月(税前)","10年",info.getOral_id()};
+		String[] data = new String[]{info.getCompanyName(),info.getHireTitle(),info.getOralTime(),info.getCompanyAddress(),info.getComTel(),info.getSalay()+"元/月(税前)",info.getWorkYear()+"年",info.getOral_id(),info.getComLinkman()};
 		i.putExtra("oral", data);
 		startActivity(i);
 	}
