@@ -67,6 +67,18 @@ public class ZhiWeiFragment extends BaseFragment implements OnItemClickListener{
 //		infos.add(info2);
 	}
 	@Override
+	public void onResume() {
+		super.onResume();
+		Logger.i("STATE", this.toString()+":onResume");
+		getOralList(false);
+	}
+	@Override
+	public void onPushClick() {
+		super.onPushClick();
+		Logger.i("STATE", this.toString()+":onPushClick");
+		getOralList(false);
+	}
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.page_1_layout, null);

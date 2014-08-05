@@ -184,7 +184,7 @@ public class FragmentMyInfoNew extends BaseActivity implements OnClickListener {
 //					WeiPinUtil.saveEditUserInfoState(FragmentMyInfoNew.this,
 //							code.getCode());
 					WeiPinUtil.saveEditUserInfoState(FragmentMyInfoNew.this,
-							"10045");
+							code.getCode());
 					WeiPinUtil.saveUserCount(getApplicationContext(), 5);
 				}
 				showCommitOkToast();

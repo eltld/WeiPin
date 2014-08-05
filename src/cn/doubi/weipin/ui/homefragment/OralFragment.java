@@ -93,6 +93,18 @@ public class OralFragment extends BaseFragment implements OnItemClickListener{
 		getOralList(false);
 		return v;
 	}
+	@Override
+	public void onResume() {
+		super.onResume();
+		Logger.i("STATE", this.toString()+":onResume");
+		getOralList(false);
+	}
+	@Override
+	public void onPushClick() {
+		super.onPushClick();
+		Logger.i("STATE", this.toString()+":onPushClick");
+		getOralList(false);
+	}
 	private List<OralInfo> mInfos = new ArrayList<OralInfo>();
 	private BaseAdapter mMyAdapter;
 	public void getOralList(final boolean showDialog){

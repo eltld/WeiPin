@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import cn.doubi.weipin.R;
+import cn.doubi.weipin.ui.homefragment.PushEvent;
 import cn.doubi.weipin.utils.SharedPreferencesManager;
 
 /**
@@ -21,6 +22,7 @@ abstract public class BaseActivity extends Activity
 {
 	 protected void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
+		 
 	 }
 	 /**
 	  * 请在这里初始化你的View

@@ -66,7 +66,7 @@ public class HomeActivity extends SlideBaseActivity {
 		if(WeiPinUtil.isVerify(this) && !WeiPinUtil.isEditUserInfo(this)){
 			startActivity(new Intent(this, FragmentMyInfoNew.class));
 		}
-		startPushMessageActivity();
+//		startPushMessageActivity();
 		startService(new Intent(this, WeiPinService.class));
 		PushUtils.startPush(this);
 		mDownloadManager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
@@ -79,22 +79,22 @@ public class HomeActivity extends SlideBaseActivity {
 	/**
 	 * 决定是否开启PUSH信息列表
 	 */
-	private void startPushMessageActivity() {
-		SharedPreferences sp = SharedPreferencesManager.getSP(this);
-		if (sp.getBoolean(MyPushMessageReceiver.HAVE_PUSH, false)) {
-			Intent i = new Intent(this, PushMessageActivity.class);
-			i.putExtra(MyPushMessageReceiver.PUSH_TITLE,
-					sp.getString(MyPushMessageReceiver.PUSH_TITLE, ""));
-			i.putExtra(MyPushMessageReceiver.PUSH_DESCRIPTION,
-					sp.getString(MyPushMessageReceiver.PUSH_DESCRIPTION, ""));
-			i.putExtra(MyPushMessageReceiver.PUSH_CUSTOMCONTENTSTRING, sp
-					.getString(MyPushMessageReceiver.PUSH_CUSTOMCONTENTSTRING,
-							""));
-			startActivity(i);
-			sp.edit().putBoolean(MyPushMessageReceiver.HAVE_PUSH, false)
-					.commit();
-		}
-	}
+//	private void startPushMessageActivity() {
+//		SharedPreferences sp = SharedPreferencesManager.getSP(this);
+//		if (sp.getBoolean(MyPushMessageReceiver.HAVE_PUSH, false)) {
+//			Intent i = new Intent(this, PushMessageActivity.class);
+//			i.putExtra(MyPushMessageReceiver.PUSH_TITLE,
+//					sp.getString(MyPushMessageReceiver.PUSH_TITLE, ""));
+//			i.putExtra(MyPushMessageReceiver.PUSH_DESCRIPTION,
+//					sp.getString(MyPushMessageReceiver.PUSH_DESCRIPTION, ""));
+//			i.putExtra(MyPushMessageReceiver.PUSH_CUSTOMCONTENTSTRING, sp
+//					.getString(MyPushMessageReceiver.PUSH_CUSTOMCONTENTSTRING,
+//							""));
+//			startActivity(i);
+//			sp.edit().putBoolean(MyPushMessageReceiver.HAVE_PUSH, false)
+//					.commit();
+//		}
+//	}
 
 	public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 		private ArrayList<Fragment> fragmentsList;
@@ -256,10 +256,10 @@ public class HomeActivity extends SlideBaseActivity {
 		unregisterReceiver(mDownloadReceiver);
 	}
 
-	@Override
-	protected void onNewIntent(Intent intent) {
-		startPushMessageActivity();
-	}
+//	@Override
+//	protected void onNewIntent(Intent intent) {
+//		startPushMessageActivity();
+//	}
 
 	public void onClick(View view) {
 

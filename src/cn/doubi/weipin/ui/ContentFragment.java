@@ -29,6 +29,7 @@ import cn.doubi.weipin.ui.homefragment.FragmentMyInfoNew;
 import cn.doubi.weipin.ui.homefragment.FriendFragmet;
 import cn.doubi.weipin.ui.homefragment.LuYongFragment;
 import cn.doubi.weipin.ui.homefragment.OralFragment;
+import cn.doubi.weipin.ui.homefragment.PushEvent;
 import cn.doubi.weipin.ui.homefragment.ZhiWeiFragment;
 import cn.doubi.weipin.utils.WeiPinUtil;
 
@@ -55,6 +56,7 @@ public class ContentFragment extends SupportMapFragment implements OnClickListen
 			public void onPageSelected(int position) {
 				mHomeTitleText.setText(getResources().getString(titleIds[position]));
 				changeButtonColor(position);
+				PushEvent.getInstance().firePush();
 			}
 			
 			@Override

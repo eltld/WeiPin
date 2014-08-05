@@ -62,6 +62,7 @@ public class LuYongFragment extends BaseFragment implements OnItemClickListener{
 //		mInfos.add(info1);
 //		mInfos.add(info2);
 	}
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -83,6 +84,18 @@ public class LuYongFragment extends BaseFragment implements OnItemClickListener{
 		});
 		getOralList(false);
 		return v;
+	}
+	@Override
+	public void onResume() {
+		super.onResume();
+		Logger.i("STATE", this.toString()+":onResume");
+		getOralList(false);
+	}
+	@Override
+	public void onPushClick() {
+		super.onPushClick();
+		Logger.i("STATE", this.toString()+":onPushClick");
+		getOralList(false);
 	}
 	private List<OralInfo> mInfos = new ArrayList<OralInfo>();
 	private BaseAdapter mMyAdapter;

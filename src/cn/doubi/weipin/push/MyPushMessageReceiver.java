@@ -4,14 +4,14 @@ import java.io.File;
 import java.util.List;
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
+import android.content.Intent;
 import android.text.TextUtils;
 import android.util.Log;
 import cn.doubi.weipin.domain.StartPicObj;
+import cn.doubi.weipin.ui.SplashActivity;
+import cn.doubi.weipin.ui.homefragment.PushEvent;
 import cn.doubi.weipin.utils.Logger;
 import cn.doubi.weipin.utils.PushUtils;
-import cn.doubi.weipin.utils.SharedPreferencesManager;
 import cn.doubi.weipin.utils.WeiPinUtil;
 
 import com.baidu.frontia.api.FrontiaPushMessageReceiver;
@@ -118,14 +118,6 @@ public class MyPushMessageReceiver extends FrontiaPushMessageReceiver {
 	public void onNotificationClicked(Context context, String title, 
 				String description, String customContentString) {
 		Logger.i("PUSH", "title:"+title+"--des:"+description+"--"+"diystr:"+customContentString);
-		//将点击之后的广播交给HomeActivity
-		SharedPreferences sp  =  SharedPreferencesManager.getSP(context);
-		Editor e = sp.edit();
-		e.putBoolean(HAVE_PUSH, true);
-		e.putString(PUSH_TITLE, title+"");
-		e.putString(PUSH_DESCRIPTION, description+"");
-		e.putString(PUSH_CUSTOMCONTENTSTRING, customContentString+"");
-		e.commit();
 	}
 
 	/**
