@@ -21,6 +21,7 @@ import cn.doubi.weipin.domain.BaseUserInfo;
 import cn.doubi.weipin.domain.EmploymentInfo;
 import cn.doubi.weipin.sqlite.SqliteImplements;
 import cn.doubi.weipin.ui.homefragment.PushEvent;
+import cn.doubi.weipin.utils.Logger;
 import cn.doubi.weipin.utils.PushUtils;
 import cn.doubi.weipin.utils.WeiPinUtil;
 

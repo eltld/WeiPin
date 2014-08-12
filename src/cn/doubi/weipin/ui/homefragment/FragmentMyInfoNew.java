@@ -181,8 +181,6 @@ public class FragmentMyInfoNew extends BaseActivity implements OnClickListener {
 				Logger.i("USERINFO", t);
 				ResultCode code = new Gson().fromJson(t, ResultCode.class);
 				if(!WeiPinUtil.isEditUserInfo(FragmentMyInfoNew.this)){
-//					WeiPinUtil.saveEditUserInfoState(FragmentMyInfoNew.this,
-//							code.getCode());
 					WeiPinUtil.saveEditUserInfoState(FragmentMyInfoNew.this,
 							code.getCode());
 					WeiPinUtil.saveUserCount(getApplicationContext(), 5);

@@ -131,7 +131,7 @@
         android:layout_below="@+id/textView1"
         android:background="#00A0DC"
         android:gravity="center"
-        android:text="待确认"
+        android:text="已确认"
         android:textColor="#ffffff"
         android:textSize="18sp" />
 

@@ -203,7 +203,7 @@ public class OralFragment extends BaseFragment implements OnItemClickListener{
 			holder.number.setText((position+1)+"");
 			holder.time.setText(info.getCreate_time());
 			holder.tel.setText("联系电话:"+info.getComTel());
-			holder.salay.setText("面试编号:"+info.getHire_id());//改为面试编号
+			holder.salay.setText("面试编号:"+info.getOral_id());//改为面试编号
 			holder.workaddress.setText("面试地点:"+info.getCompanyAddress());//面试地点
 			if(info.getOral_rst().equals("4")){
 				holder.passButton.setText("未通过");

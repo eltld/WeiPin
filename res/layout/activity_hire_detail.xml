@@ -42,6 +42,6 @@
         style="@style/base_button_blue"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
-        android:text="投递" />
+        android:text="预约面试" />
 
 </LinearLayout>

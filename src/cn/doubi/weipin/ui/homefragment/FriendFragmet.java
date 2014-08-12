@@ -1,10 +1,9 @@
+
 package cn.doubi.weipin.ui.homefragment;
 
-import java.io.File;
 import java.util.HashMap;
 
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +37,7 @@ public class FriendFragmet extends Fragment{
         OnekeyShare oks = new OnekeyShare();
         
        
+        String shareUrl = "http://a.app.qq.com/o/simple.jsp?pkgname=cn.doubi.weipin&amp;amp;g_f=991653";
         // 分享时Notification的图标和文字
         oks.setNotification(R.drawable.ic_launcher, 
         getResources().getString(R.string.app_name));
@@ -45,15 +45,15 @@ public class FriendFragmet extends Fragment{
         // title标题，印象笔记、邮箱、信息、微信、人人网和QQ空间使用
         oks.setTitle(this.getString(R.string.share));
         // titleUrl是标题的网络链接，仅在人人网和QQ空间使用
-        oks.setTitleUrl("http://115.28.136.194:8088/wp/index.html");
+//        oks.setTitleUrl(shareUrl);
         // text是分享文本，所有平台都需要这个字段
         String userId = WeiPinUtil.getUserId(getActivity());
-        oks.setText("刚刚在微聘Android客户端获得了一个公司的录用通知,微聘真的很不错.点击链接到官网下载试试看吧!\n微聘官网:http://115.28.136.194:8088/wp/index.html\n来自微聘用户:"+userId);
+        oks.setText("刚刚在微聘Android客户端获得了一个公司的录用通知,微聘真的很不错.点击链接到官网下载试试看吧!\n微聘官网:"+shareUrl+"\n来自微聘用户:"+userId);
         // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
         // imageUrl是图片的网络路径，新浪微博、人人网、QQ空间、
         // 微信的两个平台、Linked-In支持此字段
         // url仅在微信（包括好友和朋友圈）中使用
-        oks.setUrl("http://115.28.136.194:8088/wp/index.html");
+        oks.setUrl(shareUrl);
         // appPath是待分享应用程序的本地路劲，仅在微信中使用
 //        oks.setAppPath(MainActivity.TEST_IMAGE);
         // comment是我对这条分享的评论，仅在人人网和QQ空间使用
@@ -93,16 +93,6 @@ public class FriendFragmet extends Fragment{
 			@Override
 			public void onShare(Platform platform,
 					cn.sharesdk.framework.Platform.ShareParams paramsToShare) {
-				if("WechatMoments".equals(platform.getName())){
-					File f = new File(Environment.getExternalStorageDirectory(),"share.png");
-			        if(f.exists()){
-			        	paramsToShare.setImagePath(f.getAbsolutePath());
-			        }
-					paramsToShare.setTitleUrl(null);
-					paramsToShare.setText(null);
-					paramsToShare.setUrl(null);
-					paramsToShare.setTitle(null);
-				}
 			}
 			
 		});

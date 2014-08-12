@@ -42,7 +42,7 @@
     <string name="dail_telphone">申请面试</string>
     <string name="com_name">企业名称</string>
     <string name="gangwei">面试岗位</string>
-    <string name="oral_time_str">面试时间</string>
+    <string name="oral_time_str">预约面试</string>
     <string name="salary_str">薪酬</string>
     <string name="dsalary_str">岗位薪酬</string>
     <string name="com_address_str">面试地址</string>
