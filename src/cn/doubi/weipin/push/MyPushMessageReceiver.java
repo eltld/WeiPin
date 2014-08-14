@@ -118,6 +118,7 @@ public class MyPushMessageReceiver extends FrontiaPushMessageReceiver {
 	public void onNotificationClicked(Context context, String title, 
 				String description, String customContentString) {
 		Logger.i("PUSH", "title:"+title+"--des:"+description+"--"+"diystr:"+customContentString);
+		
 	}
 
 	/**
