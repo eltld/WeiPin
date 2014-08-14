@@ -233,7 +233,7 @@ public class OralFragment extends BaseFragment implements OnItemClickListener{
 		String[] data = new String[]{info.getCompanyName(),info.getHireTitle(),info.getOralTime(),info.getCompanyAddress(),info.getComTel(),info.getSalay(),info.getWorkYear()+"年",info.getOral_id(),info.getComLinkman()};
 		i.putExtra("oral", data);
 		i.putExtra("type", "oral");
-		i.putExtra("oralState", 2);
+		i.putExtra("oralState", -1);
 		startActivity(i);
 	}
 }
